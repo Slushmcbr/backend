@@ -1,0 +1,58 @@
+
+@baseUrl = http://localhost:3000
+
+###
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+    "nome": "David Teixeira Hassun",
+    "endereco": "Rua Lençois Paulista",
+    "pacote": "B",
+    "codcliente": "00409",
+    "preco": "100.00",
+    "idade": "6589000",
+    "peso:": "59",
+    "altura": "1.65",
+    "CPF": "123.350.499-10"
+}
+
+###
+
+GET {{baseUrl}}/clientes
+
+###
+@id = 5dae3ba35aab2e0f432132ac
+GET {{baseUrl}}/clientes/{{id}}
+
+###
+
+@texto = david
+GET {{baseUrl}}/clientes/texto/{{texto}}
+
+###
+
+@idUpdate = 5dae3ba35aab2e0f432132ac
+PUT {{baseUrl}}/clientes/{{idUpdate}}
+Content-Type: application/json
+
+{
+    "nome": "Cliente sendo alterado",
+    "endereco": "Alteracao",
+    "pacote": "0",
+    "codcliente": "00004",
+    "preco": "50",
+    "idade": "29",
+    "peso:": "90",
+    "altura": "1.9",
+    "CPF": "48603371822"
+}
+###
+
+@idDelete = 5dae3ba35aab2e0f432132ac
+
+
+
+
+
+DELETE {{baseUrl}}/clientes/{{idDelete}}
